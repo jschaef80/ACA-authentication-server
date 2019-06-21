@@ -27,4 +27,14 @@ router.post('/login', (req, res) => {
     })
 })
 
+router.put('/user', isAuthenticated, (req, res) => {
+  AuthController.UpdateUser(req.user, req.body.userName)
+  .then(() => { res.send("Successful") })
+})
+
+router.put('/password', isAuthenticated, (req, res) => {
+  AuthController.UpdatePassword(req.user, req.body.password)
+  .then(() => { res.send("Successful") })
+})
+
 module.exports = router

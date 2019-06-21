@@ -13,7 +13,7 @@ NOTE: notice the ":dev". Make sure you run the above command exactly as written
 
 Look at the functions in `express/controllers`. Notice that all the functions have already been created for you. In this exercise, we will just focus on the routes. 
 
-### Part 1
+### Part 1 √√√
 
 Create an `isAuthenticated` function like shown in the slides. The function should determine the presence of the `id_token` cookie and take the appropriate action.
 
@@ -21,7 +21,7 @@ If there is no `id_token`, return the word `Unauthorized` with a `401` status co
 
 If there is a token, parse it and attach the user to the request (ex. `req.user`)
 
-### Part 2
+### Part 2 √√√
 
 Create a `put` route to `/user` and have it call `AuthController.UpdateUser` with the appropriate parameters. Remember to attach the `isAuthenticated` middleware. 
 
